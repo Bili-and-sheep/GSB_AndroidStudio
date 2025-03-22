@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
-    android:background="@android:color/white"
-    android:padding="32dp">
+    android:background="@color/white">
 
     <!-- Logo -->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:src="@drawable/nothorty"
-        android:contentDescription="Logo"
-        android:layout_gravity="center"
-        android:layout_marginBottom="100dp" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/gsb"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="40dp"/>
 
-    <!-- Premier champ de saisie -->
+    <!-- Input 1 -->
     <EditText
         android:id="@+id/input1"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="50dp"
+        android:background="@drawable/rounded_input"
         android:hint="Input"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColorHint="@android:color/white"
-        android:padding="10dp"
+        android:textColorHint="@color/white"
         android:textSize="18sp"
-        android:layout_marginBottom="20dp" />
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:inputType="text"
+        />
 
-    <!-- Deuxième champ de saisie -->
+    <!-- Input 2 -->
     <EditText
         android:id="@+id/input2"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="50dp"
+        android:background="@drawable/rounded_input"
         android:hint="Input"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColorHint="@android:color/white"
-        android:padding="10dp"
+        android:textColorHint="@color/white"
         android:textSize="18sp"
-        android:layout_marginBottom="30dp" />
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:inputType="text"/>
 
-    <!-- Bouton Continuer -->
+    <!-- Bouton Continue -->
     <Button
         android:id="@+id/continueButton"
-        android:layout_width="200dp"
+        android:layout_width="180dp"
         android:layout_height="50dp"
+        android:background="@drawable/rounded_button"
         android:text="Continue"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_gravity="center" />
-
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
