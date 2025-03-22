@@ -1,8 +1,10 @@
 package com.example.gsb_mars2025;
 
-import retrofit2.http.GET;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
 
-public interface OpenWeatherServices {
-    @GET("weather?q=London&appid=e075a0b59517e88cc46940bb262add13")
-    Call<Visiteur> getVisiteur();
+public interface getVisiteursInterface {
+    @POST("visiteurs/login") // Assurez-vous que cette route correspond bien à ton API
+    Call<LoginResponse> login(@Body LoginRequest loginRequest);
 }
