@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E3F2FD"
     tools:context=".SecondActivity">
 
+    <!-- Titre centré -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Welcome on the second activity"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="center"
-        android:textSize="20sp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
 
+    <!-- Bouton Retour -->
     <Button
         android:id="@+id/BackButton"
         android:layout_width="180dp"
@@ -22,8 +33,10 @@
         android:text="Back"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        tools:ignore="MissingConstraints" />
-
+        android:fontFamily="@font/annie_use_your_telescope"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
