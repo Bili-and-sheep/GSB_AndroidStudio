@@ -1,21 +1,25 @@
 package com.example.gsb_mars2025;
 
+import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
-public interface SaperliExpressInterface {
+public interface ApiService {
 
-    @POST("visiteurs/login") // Assurez-vous que cette route correspond bien à ton API
-    Call<LoginResponse> login(@Body LoginRequest loginRequest);
+    @POST("visiteurs/login")
+    Call<Visiteur> getToken(@Body Map<String, String> credentials);
 
-    @GET("/praticiens")
-    Call<LoginPracticienResponse> login(@Body LoginPracticienRequest loginPracticienRequest);
+    @GET("visiteurs/{id}")
+    Call<Visiteur> getVisiteur(@Path("id") String id, @Header("Authorization") String token);
 
-    @GET("/motifs")
-    Call<VisitesResponse> login(@Body VisitesRequest visitesRequest);
+    @GET("praticiens")
+    Call<Praticien[]> getPraticiens(@Header("Authorization") String token);
 
-    @GET("/motifs")
-    Call<LoginPracticienResponse> login(@Body LoginPracticienRequest loginPracticienRequest);
+    @GET("visites")
+    Call<Visite[]> getVisites(@Header("Authorization") String token);
 }
