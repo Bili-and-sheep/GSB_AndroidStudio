@@ -3,7 +3,6 @@ package com.example.gsb_mars2025;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // Création de l'instance Retrofit avec getVisiteursInterface
-        getVisiteursInterface apiService = RetrofitClientInstance.getRetrofitInstance().create(getVisiteursInterface.class);
+        // Création de l'instance Retrofit avec SaperliExpressInterface
+        SaperliExpressInterface apiService = RetrofitClientInstance.getRetrofitInstance().create(SaperliExpressInterface.class);
         LoginRequest loginRequest = new LoginRequest(email, password);
 
         Call<LoginResponse> call = apiService.login(loginRequest);
