@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewInfosPraticien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informations du Praticien"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/listViewVisites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/buttonNouvelleVisite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nouvelle visite" />
+</LinearLayout>

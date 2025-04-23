@@ -1,34 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GSB : Gestion des visites"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal" />
-
     <EditText
-        android:id="@+id/editTextMainEmail"
+        android:id="@+id/editTextNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="jean.dupont@example2.com"
-        android:hint="email" />
+        android:hint="Nom" />
 
     <EditText
-        android:id="@+id/editTextMainPassword"
+        android:id="@+id/editTextPrenom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="securePassword123"
-        android:hint="mot de passe"
-        android:inputType="textPassword" />
+        android:hint="Prénom" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
 
     <Button
-        android:id="@+id/buttonMainLogin"
+        android:id="@+id/buttonCreerPraticien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Se connecter" />
+        android:text="Créer le praticien" />
 </LinearLayout>

@@ -16,16 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activity_visiteur"
-            android:exported="false" />
-        <activity
-            android:name=".activity_practicien"
-            android:exported="false" />
-        <activity
-            android:name=".SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.GSB_Mars2025">
             <intent-filter>
@@ -34,6 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CreatePraticienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PraticienActivity"
+            android:exported="false" />
+        <activity android:name=".Activities.MesPraticiensActivity" />
     </application>
 
 </manifest>
