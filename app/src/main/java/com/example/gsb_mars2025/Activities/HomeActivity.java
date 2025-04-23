@@ -28,9 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
         binding.buttonMesPraticiens.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, MesPraticiensActivity.class);
-/*
-            intent.putExtra("visiteurId", visiteur.get_id());
-*/
+            intent.putExtra("visiteurId", visiteur.getVisiteurId());  // 👈 assure-toi que c’est bien ça
             startActivity(intent);
         });
 

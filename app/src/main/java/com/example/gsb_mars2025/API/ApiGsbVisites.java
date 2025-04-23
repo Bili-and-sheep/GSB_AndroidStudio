@@ -21,10 +21,8 @@ public interface ApiGsbVisites {
     @GET("visiteurs/{id}")
     Call<Visiteur> getVisiteurById(@Header("Authorization") String token, @Path("id") String id);
 
-    /*@POST("auth/login")
-    Call<LoginResponse> login(@Body LoginRequest request);*/
-
     @GET("praticiens/byVisiteur/{id}")
     Call<List<Praticien>> getPraticiensByVisiteur(@Path("id") String id);
+
 
 }
