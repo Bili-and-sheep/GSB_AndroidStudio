@@ -1,10 +1,10 @@
-package com.example.gsb_mars2025.Repository;
+package com.example.gsb.Repository;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.gsb_mars2025.API.ApiGsbVisites;
-import com.example.gsb_mars2025.Model.Visiteur;
+import com.example.gsb.API.ApiGsbVisites;
+import com.example.gsb.Model.Visiteur;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,10 +1,10 @@
-package com.example.gsb_mars2025.Activities;
+package com.example.gsb.Activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gsb_mars2025.databinding.ActivityPraticienBinding;
+import com.example.gsb.databinding.ActivityPraticienBinding;
 
 public class PraticienActivity extends AppCompatActivity {
 

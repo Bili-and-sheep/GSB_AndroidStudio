@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.Activities;
+package com.example.gsb.Activities;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,12 +8,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gsb_mars2025.Model.Praticien;
-import com.example.gsb_mars2025.R;
-import com.example.gsb_mars2025.ViewModel.VisiteurViewModel;
-import com.example.gsb_mars2025.adapters.PraticienAdapter;
-
-import java.util.List;
+import com.example.gsb.R;
+import com.example.gsb.ViewModel.VisiteurViewModel;
+import com.example.gsb.adapters.PraticienAdapter;
 
 public class MesPraticiensActivity extends AppCompatActivity {
 

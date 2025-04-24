@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.gsb_mars2025'
+    namespace 'com.example.gsb'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.gsb_mars2025"
+        applicationId "com.example.gsb"
         minSdk 28
         targetSdk 34
         versionCode 1

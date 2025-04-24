@@ -1,11 +1,11 @@
-package com.example.gsb_mars2025.ViewModel;
+package com.example.gsb.ViewModel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.gsb_mars2025.Model.Praticien;
-import com.example.gsb_mars2025.Model.Visiteur;
-import com.example.gsb_mars2025.Repository.VisiteurRepository;
+import com.example.gsb.Model.Praticien;
+import com.example.gsb.Model.Visiteur;
+import com.example.gsb.Repository.VisiteurRepository;
 
 import java.util.List;
 

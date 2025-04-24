@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.API;
+package com.example.gsb.API;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.Activities;
+package com.example.gsb.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +7,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.gsb_mars2025.Model.Visiteur;
-import com.example.gsb_mars2025.ViewModel.AuthViewModel;
-import com.example.gsb_mars2025.ViewModel.VisiteurViewModel;
-import com.example.gsb_mars2025.databinding.ActivityHomeBinding;
-import com.example.gsb_mars2025.databinding.ActivityMainBinding;
+import com.example.gsb.Model.Visiteur;
+import com.example.gsb.ViewModel.VisiteurViewModel;
+import com.example.gsb.databinding.ActivityHomeBinding;
+import com.example.gsb.databinding.ActivityMainBinding;
 
 public class HomeActivity extends AppCompatActivity {
 

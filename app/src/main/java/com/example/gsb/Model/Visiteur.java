@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.Model;
+package com.example.gsb.Model;
 
 import com.google.gson.annotations.SerializedName;
 

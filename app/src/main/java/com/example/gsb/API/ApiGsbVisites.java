@@ -1,7 +1,7 @@
-package com.example.gsb_mars2025.API;
+package com.example.gsb.API;
 
-import com.example.gsb_mars2025.Model.Praticien;
-import com.example.gsb_mars2025.Model.Visiteur;
+import com.example.gsb.Model.Praticien;
+import com.example.gsb.Model.Visiteur;
 
 import java.util.List;
 import java.util.Map;

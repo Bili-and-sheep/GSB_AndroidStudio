@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.Model;
+package com.example.gsb.Model;
 
 public class Praticien {
     private String _id;

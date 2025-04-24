@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025;
+package com.example.gsb;
 
 import android.content.Context;
 

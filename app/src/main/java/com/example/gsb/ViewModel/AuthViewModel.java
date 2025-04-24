@@ -1,14 +1,12 @@
-package com.example.gsb_mars2025.ViewModel;
+package com.example.gsb.ViewModel;
 
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.gsb_mars2025.API.ApiGsbVisites;
-import com.example.gsb_mars2025.API.RetrofitClientInstance;
-import com.example.gsb_mars2025.Model.Visiteur;
-import com.example.gsb_mars2025.Repository.AuthRepository;
+import com.example.gsb.API.ApiGsbVisites;
+import com.example.gsb.API.RetrofitClientInstance;
+import com.example.gsb.Model.Visiteur;
+import com.example.gsb.Repository.AuthRepository;
 
 public class AuthViewModel extends ViewModel {
     private AuthRepository authRepository;

@@ -1,4 +1,4 @@
-package com.example.gsb_mars2025.adapters;
+package com.example.gsb.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gsb_mars2025.Model.Praticien;
-import com.example.gsb_mars2025.R;
+import com.example.gsb.Model.Praticien;
+import com.example.gsb.R;
 
 import java.util.List;
 
