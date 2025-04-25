@@ -4,9 +4,9 @@ public class Visite {
     private String _id;
     private String date_visite;
     private String commentaire;
-    private String visiteur;
-    private String praticien;
-    private String motif;
+    private Object visiteur;   // objet JSON
+    private Object praticien;  // objet JSON aussi !
+    private Object motif;      // objet JSON aussi
 
     public String getId() {
         return _id;
@@ -20,19 +20,19 @@ public class Visite {
         return commentaire;
     }
 
-    public String getVisiteur() {
+    public Object getVisiteur() {
         return visiteur;
     }
 
-    public String getPraticien() {
+    public Object getPraticien() {
         return praticien;
     }
 
-    public String getMotif() {
+    public Object getMotif() {
         return motif;
     }
-    @Override
 
+    @Override
     public String toString() {
         return "Visite{" +
                 "id='" + _id + '\'' +
