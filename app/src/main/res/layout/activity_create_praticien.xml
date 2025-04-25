@@ -1,31 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextNom"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nom" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextPrenom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Prénom" />
+        <EditText
+            android:id="@+id/edit_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email" />
+        <EditText
+            android:id="@+id/edit_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prénom"
+            android:layout_marginTop="8dp"/>
 
-    <Button
-        android:id="@+id/buttonCreerPraticien"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Créer le praticien" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/edit_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Téléphone"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_rue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rue"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_code_postal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code postal"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ville"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btn_valider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créer le praticien"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

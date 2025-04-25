@@ -33,4 +33,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Créer un nouveau praticien" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Se déconnecter" />
 </LinearLayout>

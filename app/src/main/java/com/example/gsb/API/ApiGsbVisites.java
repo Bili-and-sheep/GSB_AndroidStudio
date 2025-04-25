@@ -29,6 +29,9 @@ public interface ApiGsbVisites {
     @GET("praticiens/byVisiteur/{id}")
     Call<List<Praticien>> getPraticiensByVisiteur(@Path("id") String id);
 
+    @POST("praticiens")
+    Call<Praticien> createPraticien(@Header("Authorization") String token, @Body Praticien praticien);
+
     @GET("visites/vbyp")
     Call<List<Visite>> getVisitesByPraticien(@Query("praticienId") String praticienId);
 

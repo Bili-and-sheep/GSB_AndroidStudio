@@ -1,6 +1,7 @@
 package com.example.gsb.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     private TextView textViewHomeWelcome;
     private RecyclerView recyclerViewPraticiens;
     private Button btnNewPracticien;
+    private Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class HomeActivity extends AppCompatActivity {
         recyclerViewPraticiens = findViewById(R.id.recyclerViewPraticiens);
         recyclerViewPraticiens.setLayoutManager(new LinearLayoutManager(this));
         btnNewPracticien = findViewById(R.id.buttonCreatePraticien);
+        btnLogout = findViewById(R.id.btn_logout);
+
 
         if (visiteur != null) {
             textViewHomeWelcome.setText("Bienvenue " + visiteur.getPrenom() + " " + visiteur.getNom());
@@ -54,6 +58,18 @@ public class HomeActivity extends AppCompatActivity {
         btnNewPracticien.setOnClickListener(v -> {
             Intent intentHome = new Intent(HomeActivity.this, CreatePraticienActivity.class);
             startActivity(intentHome);
+        });
+
+        btnLogout.setOnClickListener(v -> {
+            SharedPreferences prefs = getSharedPreferences("gsb_prefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear(); // 🔥 Efface tout (token + visiteur)
+            editor.apply();
+
+            Intent intent = new Intent(this, MainActivity.class); // retourne vers login
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // ⚡ clean toutes les anciennes activités
+            startActivity(intent);
+            finish();
         });
     }
 
