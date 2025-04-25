@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -5,32 +6,35 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewHomeWelcome"
+        android:id="@+id/nom_prenom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mes Praticiens"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
+        android:text="Nom Prénom"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/email_praticien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mes Praticiens"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:text="email@exemple.com"
         android:layout_marginBottom="12dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPraticiens"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        />
+        android:text="Visites :"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_visites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
-        android:id="@+id/buttonCreatePraticien"
+        android:id="@+id/btn_nouvelle_visite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Créer un nouveau praticien" />
+        android:text="Nouvelle visite" />
 </LinearLayout>

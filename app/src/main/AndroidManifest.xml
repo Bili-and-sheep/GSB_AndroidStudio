@@ -31,10 +31,8 @@
         <activity
             android:name=".Activities.CreatePraticienActivity"
             android:exported="false" />
-        <activity
-            android:name=".Activities.PraticienActivity"
+        <activity android:name=".Activities.PraticienDetailsActivity"
             android:exported="false" />
-        <activity android:name=".Activities.MesPraticiensActivity" />
     </application>
 
 </manifest>

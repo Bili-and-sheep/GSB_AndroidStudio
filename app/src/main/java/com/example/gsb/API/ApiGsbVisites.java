@@ -1,6 +1,7 @@
 package com.example.gsb.API;
 
 import com.example.gsb.Model.Praticien;
+import com.example.gsb.Model.Visite;
 import com.example.gsb.Model.Visiteur;
 
 import java.util.List;
@@ -24,5 +25,6 @@ public interface ApiGsbVisites {
     @GET("praticiens/byVisiteur/{id}")
     Call<List<Praticien>> getPraticiensByVisiteur(@Path("id") String id);
 
-
+    @GET("visites/byPraticien/{id}")
+    Call<List<Visite>> getVisitesByPraticien(@Path("id") String praticienId);
 }

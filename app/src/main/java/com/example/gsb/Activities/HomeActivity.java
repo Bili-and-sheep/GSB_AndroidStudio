@@ -2,6 +2,7 @@ package com.example.gsb.Activities;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     private VisiteurViewModel visiteurViewModel;
     private TextView textViewHomeWelcome;
     private RecyclerView recyclerViewPraticiens;
+    private Button btnNewPracticien;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         textViewHomeWelcome = findViewById(R.id.textViewHomeWelcome);
         recyclerViewPraticiens = findViewById(R.id.recyclerViewPraticiens);
         recyclerViewPraticiens.setLayoutManager(new LinearLayoutManager(this));
+        btnNewPracticien = findViewById(R.id.buttonCreatePraticien);
 
         if (visiteur != null) {
             textViewHomeWelcome.setText("Bienvenue " + visiteur.getPrenom() + " " + visiteur.getNom());
@@ -46,6 +49,10 @@ public class HomeActivity extends AppCompatActivity {
             // Charger les praticiens
             visiteurViewModel.getPraticiens(visiteur.getVisiteurId()).observe(this, this::setupRecyclerView);
         }
+
+        btnNewPracticien.setOnClickListener(v -> {
+
+        });
     }
 
     private void setupRecyclerView(List<Praticien> praticiens) {
