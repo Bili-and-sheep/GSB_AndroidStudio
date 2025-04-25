@@ -25,14 +25,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activities.HomeActivity"
             android:exported="false" />
+
         <activity
             android:name=".Activities.CreatePraticienActivity"
             android:exported="false" />
+        <activity
+            android:name=".Activities.CreateVisiteActivity"
+            android:exported="false" />
+
         <activity android:name=".Activities.PraticienDetailsActivity"
             android:exported="false" />
+
         <activity android:name=".Activities.VisiteDetailActivity"
             android:exported="false" />
     </application>

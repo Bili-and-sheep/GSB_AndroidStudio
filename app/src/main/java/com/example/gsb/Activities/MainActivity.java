@@ -34,9 +34,14 @@ public class MainActivity extends AppCompatActivity {
             authViewModel.login(email, password).observe(this, visiteur -> {
                 if (visiteur != null) {
                     Toast.makeText(MainActivity.this, "Connexion réussie !", Toast.LENGTH_SHORT).show();
-
+                    String token = visiteur.getToken(); // suppose que getToken() existe
+                    getSharedPreferences("gsb_prefs", MODE_PRIVATE)
+                            .edit()
+                            .putString("token", token)
+                            .apply();
                     Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
                     intentHome.putExtra("visiteur", visiteur);
+
                     startActivity(intentHome);
                 } else {
                     Toast.makeText(MainActivity.this, "Connexion échouée !", Toast.LENGTH_SHORT).show();

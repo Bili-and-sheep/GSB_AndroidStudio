@@ -1,32 +1,42 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextDate"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextMotif"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="motif" />
+        <TextView android:text="Date de la visite :" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2024-05-15"
+            android:hint="YYYY-MM-DD" />
 
-    <EditText
-        android:id="@+id/editTextCommentaire"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:hint="commentaire"
-        android:gravity="top"
-        android:inputType="textMultiLine" />
+        <TextView android:text="Motif :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        <Spinner
+            android:id="@+id/spinner_motif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/buttonCreateVisite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Créer la visite" />
-</LinearLayout>
+        <TextView android:text="Commentaire :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/edit_commentaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AHHHHHHHHHHHH"
+            android:hint="Commentaire de la visite" />
+
+        <Button
+            android:id="@+id/btn_valider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créer la visite"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

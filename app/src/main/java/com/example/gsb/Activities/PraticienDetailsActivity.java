@@ -1,5 +1,7 @@
 package com.example.gsb.Activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -27,6 +29,7 @@ public class PraticienDetailsActivity extends AppCompatActivity {
     private Button btnNouvelleVisite;
     private VisiteAdapter adapter;
     private VisiteViewModel viewModel;
+    private Praticien praticien;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class PraticienDetailsActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_visites);
         btnNouvelleVisite = findViewById(R.id.btn_nouvelle_visite);
 
-        Praticien praticien = (Praticien) getIntent().getSerializableExtra("praticien");
+        praticien = (Praticien) getIntent().getSerializableExtra("praticien");
 
         if (praticien != null) {
             nomPrenomTextView.setText(praticien.getNom() + " " + praticien.getPrenom());
@@ -47,21 +50,43 @@ public class PraticienDetailsActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             adapter = new VisiteAdapter(new java.util.ArrayList<>());
             recyclerView.setAdapter(adapter);
-            Log.d("GSB_DEBUG", "Praticien ID envoyé : " + praticien.get_id());
+
             viewModel = new ViewModelProvider(this).get(VisiteViewModel.class);
-            viewModel.getVisitesByPraticien(praticien.get_id()).observe(this, visites -> {
-                Log.d("GSB_DEBUG", "Visites reçues : " + visites);
-                if (visites != null) {
-                    adapter = new VisiteAdapter(visites);
-                    recyclerView.setAdapter(adapter);
-                } else {
-                    Toast.makeText(this, "Erreur de chargement des visites", Toast.LENGTH_SHORT).show();
-                }
-            });
+            Log.d("GSB_DEBUG", "Praticien affiché : " + praticien.get_id());
+            chargerVisites();
         }
 
         btnNouvelleVisite.setOnClickListener(v -> {
-            // TODO: ouvrir l'activité de création de visite
+            SharedPreferences prefs = getSharedPreferences("gsb_prefs", MODE_PRIVATE);
+            String token = prefs.getString("token", null);
+
+            if (token != null) {
+                Intent intent = new Intent(this, CreateVisiteActivity.class);
+                intent.putExtra("praticien", praticien); // on envoie le praticien sélectionné
+                intent.putExtra("token", token);         // on envoie le token dynamique
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Token introuvable, veuillez vous reconnecter", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (praticien != null && viewModel != null) {
+            chargerVisites(); // Recharge à chaque retour sur l'écran
+        }
+    }
+
+    private void chargerVisites() {
+        viewModel.getVisitesByPraticien(praticien.get_id()).observe(this, visites -> {
+            if (visites != null) {
+                adapter = new VisiteAdapter(visites);
+                recyclerView.setAdapter(adapter);
+            } else {
+                Toast.makeText(this, "Erreur de chargement des visites", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

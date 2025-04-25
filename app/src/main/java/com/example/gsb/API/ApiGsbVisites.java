@@ -1,5 +1,6 @@
 package com.example.gsb.API;
 
+import com.example.gsb.Model.Motif;
 import com.example.gsb.Model.Praticien;
 import com.example.gsb.Model.Visite;
 import com.example.gsb.Model.Visiteur;
@@ -28,4 +29,10 @@ public interface ApiGsbVisites {
 
     @GET("visites/vbyp")
     Call<List<Visite>> getVisitesByPraticien(@Query("praticienId") String praticienId);
+
+    @GET("motifs")
+    Call<List<Motif>> getMotifs();
+
+    @POST("visites")
+    Call<Visite> createVisite(@Header("Authorization") String token, @Body Visite visite);
 }

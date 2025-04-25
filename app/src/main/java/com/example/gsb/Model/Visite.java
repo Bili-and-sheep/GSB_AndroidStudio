@@ -6,9 +6,9 @@ public class Visite implements Serializable {
     private String _id;
     private String date_visite;
     private String commentaire;
-    private Object visiteur;   // objet JSON
-    private Object praticien;  // objet JSON aussi !
-    private Object motif;      // objet JSON aussi
+    private Object visiteur;
+    private Object praticien;
+    private Object motif;
 
     public String getId() {
         return _id;
@@ -32,6 +32,26 @@ public class Visite implements Serializable {
 
     public Object getMotif() {
         return motif;
+    }
+
+    public void setDateVisite(String date_visite) {
+        this.date_visite = date_visite;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+
+    public void setVisiteur(Object visiteur) {
+        this.visiteur = visiteur;
+    }
+
+    public void setPraticien(Object praticien) {
+        this.praticien = praticien;
+    }
+
+    public void setMotif(Object motif) {
+        this.motif = motif;
     }
 
     @Override
