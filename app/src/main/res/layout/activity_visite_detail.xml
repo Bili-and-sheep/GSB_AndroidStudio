@@ -13,36 +13,45 @@
             android:id="@+id/text_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date :"
-            android:textStyle="bold" />
+            android:text="Date :" />
 
         <TextView
             android:id="@+id/text_motif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Motif :"
-            android:layout_marginTop="8dp" />
+            android:text="Motif :" />
 
         <TextView
             android:id="@+id/text_commentaire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Commentaire :"
-            android:layout_marginTop="8dp" />
+            android:text="Commentaire :" />
 
         <TextView
             android:id="@+id/text_visiteur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Visiteur :"
-            android:layout_marginTop="8dp" />
+            android:text="Visiteur :" />
 
         <TextView
             android:id="@+id/text_praticien"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Praticien :"
-            android:layout_marginTop="8dp" />
+            android:text="Praticien :" />
+
+        <Button
+            android:id="@+id/btn_modifier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btn_supprimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supprimer"
+            android:layout_marginTop="12dp" />
 
     </LinearLayout>
 </ScrollView>

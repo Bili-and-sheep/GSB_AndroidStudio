@@ -42,6 +42,9 @@
 
         <activity android:name=".Activities.VisiteDetailActivity"
             android:exported="false" />
+
+        <activity android:name=".Activities.UpdateVisiteActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
