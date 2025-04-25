@@ -1,5 +1,6 @@
 package com.example.gsb.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gsb.Activities.VisiteDetailActivity;
 import com.example.gsb.Model.Visite;
 import com.example.gsb.R;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -39,7 +42,7 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.VisiteView
             date = date.split("T")[0];
         }
 
-        // Récupérer libellé du motif
+        // Extraire libellé du motif
         String motifLibelle = "";
         if (visite.getMotif() instanceof Map) {
             Object libelleObj = ((Map<?, ?>) visite.getMotif()).get("libelle");
@@ -51,6 +54,13 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.VisiteView
         holder.dateText.setText(date);
         holder.motifText.setText("Motif : " + motifLibelle);
         holder.commentaireText.setText(visite.getCommentaire());
+
+        // 👇 Gérer le clic sur une visite
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), VisiteDetailActivity.class);
+            intent.putExtra("visite", visite);
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override

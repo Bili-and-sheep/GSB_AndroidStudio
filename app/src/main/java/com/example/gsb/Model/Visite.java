@@ -1,6 +1,8 @@
 package com.example.gsb.Model;
 
-public class Visite {
+import java.io.Serializable;
+
+public class Visite implements Serializable {
     private String _id;
     private String date_visite;
     private String commentaire;
