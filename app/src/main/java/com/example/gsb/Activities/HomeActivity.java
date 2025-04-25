@@ -1,5 +1,6 @@
 package com.example.gsb.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -51,7 +52,8 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         btnNewPracticien.setOnClickListener(v -> {
-
+            Intent intentHome = new Intent(HomeActivity.this, CreatePraticienActivity.class);
+            startActivity(intentHome);
         });
     }
 
