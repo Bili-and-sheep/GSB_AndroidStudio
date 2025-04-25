@@ -4,11 +4,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.gsb.Model.Visite;
 import com.example.gsb.R;
+
 import java.util.List;
+import java.util.Map;
 
 public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.VisiteViewHolder> {
 
@@ -28,8 +32,24 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.VisiteView
     @Override
     public void onBindViewHolder(@NonNull VisiteViewHolder holder, int position) {
         Visite visite = visiteList.get(position);
-        holder.dateText.setText(visite.getDateVisite());
-        holder.motifText.setText("Motif ID: " + visite.getMotif());
+
+        // Nettoyer la date
+        String date = visite.getDateVisite();
+        if (date != null && date.contains("T")) {
+            date = date.split("T")[0];
+        }
+
+        // Récupérer libellé du motif
+        String motifLibelle = "";
+        if (visite.getMotif() instanceof Map) {
+            Object libelleObj = ((Map<?, ?>) visite.getMotif()).get("libelle");
+            if (libelleObj != null) {
+                motifLibelle = libelleObj.toString();
+            }
+        }
+
+        holder.dateText.setText(date);
+        holder.motifText.setText("Motif : " + motifLibelle);
         holder.commentaireText.setText(visite.getCommentaire());
     }
 
