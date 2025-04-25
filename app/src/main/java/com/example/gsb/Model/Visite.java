@@ -31,4 +31,13 @@ public class Visite {
     public String getMotif() {
         return motif;
     }
+    @Override
+
+    public String toString() {
+        return "Visite{" +
+                "id='" + _id + '\'' +
+                ", date='" + date_visite + '\'' +
+                ", commentaire='" + commentaire + '\'' +
+                '}';
+    }
 }

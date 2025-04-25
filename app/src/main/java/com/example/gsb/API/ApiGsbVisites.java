@@ -13,6 +13,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiGsbVisites {
 
@@ -25,6 +26,6 @@ public interface ApiGsbVisites {
     @GET("praticiens/byVisiteur/{id}")
     Call<List<Praticien>> getPraticiensByVisiteur(@Path("id") String id);
 
-    @GET("visites/byPraticien/{id}")
-    Call<List<Visite>> getVisitesByPraticien(@Path("id") String praticienId);
+    @GET("visites/vbyp")
+    Call<List<Visite>> getVisitesByPraticien(@Query("praticienId") String praticienId);
 }

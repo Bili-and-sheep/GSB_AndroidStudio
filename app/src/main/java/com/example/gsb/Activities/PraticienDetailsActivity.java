@@ -1,6 +1,7 @@
 package com.example.gsb.Activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,9 +47,10 @@ public class PraticienDetailsActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             adapter = new VisiteAdapter(new java.util.ArrayList<>());
             recyclerView.setAdapter(adapter);
-
+            Log.d("GSB_DEBUG", "Praticien ID envoyé : " + praticien.get_id());
             viewModel = new ViewModelProvider(this).get(VisiteViewModel.class);
             viewModel.getVisitesByPraticien(praticien.get_id()).observe(this, visites -> {
+                Log.d("GSB_DEBUG", "Visites reçues : " + visites);
                 if (visites != null) {
                     adapter = new VisiteAdapter(visites);
                     recyclerView.setAdapter(adapter);

@@ -1,5 +1,7 @@
 package com.example.gsb.Repository;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -28,14 +30,17 @@ public class VisiteRepository {
             @Override
             public void onResponse(Call<List<Visite>> call, Response<List<Visite>> response) {
                 if (response.isSuccessful()) {
+                    Log.d("GSB_DEBUG", "Réponse API : " + response.body());
                     data.setValue(response.body());
                 } else {
+                    Log.e("GSB_DEBUG", "Erreur API : code " + response.code());
                     data.setValue(null);
                 }
             }
 
             @Override
             public void onFailure(Call<List<Visite>> call, Throwable t) {
+                Log.e("GSB_DEBUG", "Échec de l'appel Retrofit : " + t.getMessage());
                 data.setValue(null);
             }
         });
