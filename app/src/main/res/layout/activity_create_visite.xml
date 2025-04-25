@@ -2,41 +2,45 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/gsb_background"
+    android:padding="24dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <TextView android:text="Date de la visite :" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/edit_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2024-05-15"
-            android:hint="YYYY-MM-DD" />
+            android:hint="Date (YYYY-MM-DD)"
+            android:backgroundTint="@color/gsb_accent"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
 
-        <TextView android:text="Motif :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
-        <Spinner
-            android:id="@+id/spinner_motif"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView android:text="Commentaire :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
         <EditText
             android:id="@+id/edit_commentaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AHHHHHHHHHHHH"
-            android:hint="Commentaire de la visite" />
+            android:hint="Commentaire"
+            android:backgroundTint="@color/gsb_accent"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_motif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"/>
 
         <Button
             android:id="@+id/btn_valider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Créer la visite"
-            android:layout_marginTop="20dp" />
-
+            android:text="Valider la visite"
+            style="@style/GSBButton" />
     </LinearLayout>
 </ScrollView>

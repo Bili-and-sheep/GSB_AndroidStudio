@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialisation du ViewModel
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
 
-        binding.buttonMainLogin.setOnClickListener(v -> {
+        binding.btnLogin.setOnClickListener(v -> {
             String email = binding.editTextMainEmail.getText().toString();
             String password = binding.editTextMainPassword.getText().toString();
 

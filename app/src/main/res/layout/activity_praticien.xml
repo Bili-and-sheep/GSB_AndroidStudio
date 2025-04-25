@@ -1,25 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gsb_background"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <TextView
         android:id="@+id/textViewInfosPraticien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Informations du Praticien"
-        android:textSize="18sp" />
+        android:textColor="@color/gsb_text_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
     <ListView
         android:id="@+id/listViewVisites"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:padding="8dp" />
 
     <Button
         android:id="@+id/buttonNouvelleVisite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nouvelle visite" />
+        android:text="Nouvelle visite"
+        style="@style/GSBButton"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

@@ -1,34 +1,55 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:background="#F5EBFF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GSB : Gestion des visites"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:id="@+id/editTextMainEmail"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="jean.dupont@example.com"
-        android:hint="email" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/editTextMainPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="securePassword123"
-        android:hint="mot de passe"
-        android:inputType="textPassword" />
+        <ImageView
+            android:id="@+id/logo_gsb"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/gsb"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="Logo GSB" />
 
-    <Button
-        android:id="@+id/buttonMainLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Se connecter" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/editTextMainEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:backgroundTint="#C94AE2"
+            android:text="jean.dupont@example.com"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/editTextMainPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:backgroundTint="#C94AE2"
+            android:text="securePassword123"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GSBButton"
+            android:text="Se connecter"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>

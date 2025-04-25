@@ -2,39 +2,70 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/gsb_background"
+    android:padding="24dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <TextView android:text="Date de la visite :" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Date de la visite :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gsb_text_dark"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
         <EditText
             android:id="@+id/edit_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="YYYY-MM-DD" />
+            android:hint="YYYY-MM-DD"
+            android:backgroundTint="@color/gsb_accent"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
 
-        <TextView android:text="Motif :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        <TextView
+            android:text="Motif :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gsb_text_dark"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
         <Spinner
             android:id="@+id/spinner_motif"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
 
-        <TextView android:text="Commentaire :" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        <TextView
+            android:text="Commentaire :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gsb_text_dark"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
         <EditText
             android:id="@+id/edit_commentaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Commentaire de la visite" />
+            android:hint="Commentaire de la visite"
+            android:backgroundTint="@color/gsb_accent"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/btn_valider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Valider les modifications"
-            android:layout_marginTop="20dp" />
+            style="@style/GSBButton" />
 
     </LinearLayout>
 </ScrollView>

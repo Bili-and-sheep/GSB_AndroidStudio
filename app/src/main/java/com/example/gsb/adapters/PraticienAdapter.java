@@ -33,6 +33,8 @@ public class PraticienAdapter extends RecyclerView.Adapter<PraticienAdapter.Prat
     public void onBindViewHolder(PraticienViewHolder holder, int position) {
         Praticien praticien = praticiens.get(position);
         holder.nomTextView.setText(praticien.getNom() + " " + praticien.getPrenom());
+        holder.villeTextView.setText(praticien.getVille());
+        holder.emailTextView.setText(praticien.getEmail());
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, PraticienDetailsActivity.class);
@@ -48,10 +50,14 @@ public class PraticienAdapter extends RecyclerView.Adapter<PraticienAdapter.Prat
 
     public static class PraticienViewHolder extends RecyclerView.ViewHolder {
         TextView nomTextView;
+        TextView villeTextView;
+        TextView emailTextView;
 
         public PraticienViewHolder(View itemView) {
             super(itemView);
-            nomTextView = itemView.findViewById(R.id.textViewNom); // à adapter selon ton layout
+            nomTextView = itemView.findViewById(R.id.text_nom_praticien); // à adapter selon ton layout
+            villeTextView = itemView.findViewById(R.id.text_ville_praticien);
+            emailTextView = itemView.findViewById(R.id.text_email_praticien);
         }
     }
 }

@@ -37,10 +37,10 @@ public class HomeActivity extends AppCompatActivity {
         // Récupérer le visiteur passé depuis MainActivity
         visiteur = (Visiteur) getIntent().getSerializableExtra("visiteur");
 
-        textViewHomeWelcome = findViewById(R.id.textViewHomeWelcome);
+        textViewHomeWelcome = findViewById(R.id.textViewBienvenue);
         recyclerViewPraticiens = findViewById(R.id.recyclerViewPraticiens);
         recyclerViewPraticiens.setLayoutManager(new LinearLayoutManager(this));
-        btnNewPracticien = findViewById(R.id.buttonCreatePraticien);
+        btnNewPracticien = findViewById(R.id.btn_praticiens);
         btnLogout = findViewById(R.id.btn_logout);
 
 

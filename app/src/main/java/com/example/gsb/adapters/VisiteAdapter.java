@@ -73,9 +73,9 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.VisiteView
 
         public VisiteViewHolder(@NonNull View itemView) {
             super(itemView);
-            dateText = itemView.findViewById(R.id.date_visite);
-            motifText = itemView.findViewById(R.id.motif_visite);
-            commentaireText = itemView.findViewById(R.id.commentaire_visite);
+            dateText = itemView.findViewById(R.id.text_date_visite);
+            motifText = itemView.findViewById(R.id.text_motif_visite);
+            commentaireText = itemView.findViewById(R.id.text_commentaire_visite);
         }
     }
 }
