@@ -15,7 +15,7 @@ public class Visiteur implements Serializable {
     @SerializedName("date_embauche")
     private String dateEmbauche;
 
-       public String getVisiteurId() {
+    public String getVisiteurId() {
         return visiteurId;
     }
 

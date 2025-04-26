@@ -32,7 +32,7 @@ Le but est de faciliter la collecte, la consultation et la mise à jour de ces d
 
 ## 👥 Modalités d'accès aux productions
 
-- Code source disponible dans l'archive : `GSB_AndroidStudio.zip`
+- Code source disponible dans l'archive : `https://github.com/Bili-and-sheep/GSB_AndroidStudio.git`
 - Projet Android Studio standard : 
   - Importable directement
   - Contient le code, les ressources XML, et les fichiers de configuration Gradle.
@@ -82,17 +82,35 @@ Le but est de faciliter la collecte, la consultation et la mise à jour de ces d
 ## 📈 Schéma de données
 
 **Table Praticiens**
-- id_praticien (PK)
-- nom
-- prenom
-- specialite
-- telephone
+* _id
+* nom
+* prenom
+* tel
+* email
+* rue
+* code_postal
+* ville
 
-**Table Visites**
-- id_visite (PK)
-- date_visite
-- compte_rendu
-- id_praticien (FK)
+**Table Visite**
+* _id
+* date_visite
+* commentaire
+* visiteur
+* praticien
+* motif
+
+**Table Motif**
+- _id
+- libelle
+
+**Table Visiteurs**
+* visiteurId
+* token
+* nom
+* prenom
+* email
+* tel
+* dateEmbauche
 
 ## 🛡️ Backend/API Associé : Gestion des Rapports de Visite
 
@@ -115,12 +133,14 @@ Cette API REST en **Node.js / Express.js** permet de gérer les **rapports de vi
 ```bash
 # Cloner le projet
 git clone https://github.com/Bili-and-sheep/GSB_SaperliExpress.git
-cd api-auth
-
+cd GSB_SaperliExpress
+```
+```bash
 # Installer les dépendances
 npm init -y
 npm install
-
+```
+```bash
 # Lancer l'API
 npx ts-node server.ts
 ```
@@ -129,7 +149,7 @@ npx ts-node server.ts
 
 - **De** : Septembre 2024
 - **À** : Avril 2025
-- **Lieu** : Lycée Gabriel Fauré - Annecy
+- **Lieu** : OSINT Frindly
 - **Modalité** : Travail individuel
 
 ---
