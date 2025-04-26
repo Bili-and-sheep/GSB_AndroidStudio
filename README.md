@@ -154,5 +154,5 @@ npx ts-node server.ts
 - **Modalité** : Travail individuel
 
 ---
-
+![logout.png](logout.png)
 > Réalisé dans le cadre de l'épreuve E6 - BTS SIO 2025 - Option SLAM.
