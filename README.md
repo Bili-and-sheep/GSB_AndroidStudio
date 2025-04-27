@@ -30,13 +30,6 @@ Le but est de faciliter la collecte, la consultation et la mise à jour de ces d
 - **Base de données** : SQLite (intégrée à Android)
 - **Architecture** : Activités + DataBinding
 
-## 👥 Modalités d'accès aux productions
-
-- Code source disponible dans l'archive : `https://github.com/Bili-and-sheep/GSB_AndroidStudio.git`
-- Projet Android Studio standard : 
-  - Importable directement
-  - Contient le code, les ressources XML, et les fichiers de configuration Gradle.
-
 ## 📊 Fonctionnalités principales
 
 ### Gestion des Praticiens
@@ -58,18 +51,62 @@ Le but est de faciliter la collecte, la consultation et la mise à jour de ces d
 - **DataBinding** : liaison entre les données et les vues
 - **SQLite** : stockage local des données utilisateurs (praticiens et visites)
 
-### Principaux fichiers
-- `/app/src/main/java/com/example/gsb/`
-  - `MainActivity.java` : page d'accueil
-  - `PraticienActivity.java` : gestion des praticiens
-  - `VisiteActivity.java` : gestion des visites
-  - `CreatePraticienActivity.java` : ajout de praticien
-  - `UpdateVisiteActivity.java` : mise à jour de visite
+## 📋 Description détaillée des fonctionnalités
 
-- `/app/src/main/res/layout/`
-  - `activity_main.xml`
-  - `activity_praticien.xml`
-  - `activity_visite.xml`
+### Gestion des Praticiens
+- **Lister les praticiens** : Affichage de tous les praticiens enregistrés en base locale (SQLite) sous forme de liste.
+- **Afficher les détails d’un praticien** : Consultation de la fiche détaillée d’un praticien (nom, prénom, spécialité, téléphone, adresse email, ville).
+- **Ajouter un praticien** : Formulaire de création accessible depuis `CreatePraticienActivity`.
+- **Modifier un praticien** : Modification des informations existantes via `PraticienDetailsActivity`.
+- **Supprimer un praticien** : Suppression définitive d’un praticien depuis la fiche détail.
+
+### Gestion des Visites
+- **Lister les visites** : Affichage de toutes les visites réalisées ou programmées.
+- **Afficher les détails d’une visite** : Consultation des informations détaillées d’une visite (date, motif, commentaire, praticien associé).
+- **Ajouter une visite** : Formulaire de création de visite disponible dans `CreateVisiteActivity`.
+- **Modifier une visite** : Mise à jour des informations d'une visite via `UpdateVisiteActivity`.
+- **Supprimer une visite** : Suppression définitive d'une visite existante.
+
+---
+
+## 🎛️ Description détaillée du fonctionnement des contrôleurs
+
+### MainActivity
+- Activity principale à l’ouverture de l’application.
+- Gère la navigation vers `HomeActivity` et les vérifications d’accès.
+
+### HomeActivity
+- Tableau de bord principal.
+- Permet d'accéder à la gestion des praticiens et des visites via des boutons.
+
+### CreatePraticienActivity
+- Formulaire de saisie pour ajouter un nouveau praticien.
+- Enregistre les informations saisies dans la base SQLite après validation.
+
+### PraticienDetailsActivity
+- Affiche les informations complètes d'un praticien sélectionné.
+- Propose la modification ou la suppression du praticien.
+
+### CreateVisiteActivity
+- Formulaire de création d’une nouvelle visite.
+- Permet de sélectionner un praticien existant et de saisir les détails de la visite.
+
+### VisiteDetailActivity
+- Affiche les détails d’une visite spécifique.
+- Permet la modification ou la suppression de la visite.
+
+### UpdateVisiteActivity
+- Permet la modification d’une visite existante.
+- Affiche un formulaire pré-rempli avec les informations actuelles.
+
+---
+
+## 🔄 Workflow Général
+- L'utilisateur démarre sur `MainActivity`.
+- Il est redirigé vers `HomeActivity`.
+- Depuis `HomeActivity`, il accède soit à la liste des praticiens, soit à la liste des visites.
+- Toutes les actions (ajout, modification, suppression) sont synchronisées avec la base de données SQLite.
+- Utilisation de DataBinding pour lier les données aux interfaces utilisateurs.
 
 ## 🛠️ Stack Technique
 
