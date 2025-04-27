@@ -108,6 +108,9 @@ Le but est de faciliter la collecte, la consultation et la mise à jour de ces d
 - Toutes les actions (ajout, modification, suppression) sont synchronisées avec la base de données SQLite.
 - Utilisation de DataBinding pour lier les données aux interfaces utilisateurs.
 
+## 📱 Maquettage de l'application
+![maquette.png](maquettes_gsb.png)
+
 ## 🛠️ Stack Technique
 
 - **Android SDK** : 30+
